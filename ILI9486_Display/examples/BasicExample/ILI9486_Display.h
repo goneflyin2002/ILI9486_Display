@@ -165,7 +165,7 @@ private:
 public:
   ILI9486_Display(int8_t cs, int8_t dc, int8_t rst, int8_t mosi, int8_t sclk);
   
-  void begin(uint32_t freq = 20000000);
+  void begin(uint32_t freq = 27000000);  // Default.  Try decreasing speed if problems appear.
   void setRotation(uint8_t rotation);
   void fillScreen(uint16_t color);
   void fillRect(uint16_t x, uint16_t y, uint16_t w, uint16_t h, uint16_t color);
