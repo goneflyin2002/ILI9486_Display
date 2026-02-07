@@ -1,0 +1,72 @@
+#######################################
+# Syntax Coloring Map for ILI9486_Display
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+ILI9486_Display	KEYWORD1
+GFXfont	KEYWORD1
+GFXglyph	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+begin	KEYWORD2
+setRotation	KEYWORD2
+fillScreen	KEYWORD2
+fillRect	KEYWORD2
+fillRectDMA	KEYWORD2
+drawRect	KEYWORD2
+drawPixel	KEYWORD2
+drawLine	KEYWORD2
+drawFastHLine	KEYWORD2
+drawFastVLine	KEYWORD2
+drawCircle	KEYWORD2
+fillCircle	KEYWORD2
+drawBitmap	KEYWORD2
+setFreeFont	KEYWORD2
+setCursor	KEYWORD2
+setTextColor	KEYWORD2
+setTextSize	KEYWORD2
+setTextDatum	KEYWORD2
+print	KEYWORD2
+println	KEYWORD2
+drawChar	KEYWORD2
+drawGFXChar	KEYWORD2
+drawString	KEYWORD2
+drawCentreString	KEYWORD2
+color565	KEYWORD2
+drawWiFiIcon	KEYWORD2
+width	KEYWORD2
+height	KEYWORD2
+fontArray	KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+
+TFT_BLACK	LITERAL1
+TFT_WHITE	LITERAL1
+TFT_RED	LITERAL1
+TFT_GREEN	LITERAL1
+TFT_BLUE	LITERAL1
+TFT_CYAN	LITERAL1
+TFT_MAGENTA	LITERAL1
+TFT_YELLOW	LITERAL1
+TFT_ORANGE	LITERAL1
+TFT_GREENYELLOW	LITERAL1
+TFT_DARKGREY	LITERAL1
+TFT_LIGHTGREY	LITERAL1
+
+TL_DATUM	LITERAL1
+TC_DATUM	LITERAL1
+TR_DATUM	LITERAL1
+ML_DATUM	LITERAL1
+MC_DATUM	LITERAL1
+MR_DATUM	LITERAL1
+BL_DATUM	LITERAL1
+BC_DATUM	LITERAL1
+BR_DATUM	LITERAL1
