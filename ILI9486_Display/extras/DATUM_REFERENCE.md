@@ -1,15 +1,7 @@
 # Text Datum System - Quick Reference
 
-## What Changed From Previous Version
-
-### BEFORE (without datum):
-- Y coordinate referenced the baseline for GFX fonts
-- Text appeared higher than expected
-- Had to manually calculate offsets for positioning
-
-### AFTER (with datum):
+###  (with datum system):
 - Y coordinate references the top of text by default (TL_DATUM)
-- Text appears exactly where you specify
 - Supports 9 different positioning modes
 
 ---
@@ -165,7 +157,7 @@ tft.drawString("End", 310, 100, 2);
 
 ## Practical Examples
 
-### Example 1: Channel Display (Your Use Case)
+### Example 1: Channel Display 
 ```cpp
 void drawChannelInfo() {
   tft.setTextDatum(TC_DATUM);  // Set once at top of function
@@ -229,26 +221,17 @@ void showMessage(const char* msg) {
 ### Built-in vs GFX Fonts
 - Datum works with both built-in 5x7 and GFX fonts
 - Positioning is consistent across font types
-- Built-in font assumes all pixels above baseline (simplified)
+- Built-in font assumes all pixels above baseline
 
 ### Return Value
 - drawString() still returns the width in pixels
 - Useful for chaining text or calculating positions
 
 ---
-
-## Migration from Old Code
-
-### OLD CODE (baseline positioning):
-```cpp
-// Text appeared too high
-tft.drawString("Hello", 100, 50, 2);
-```
-
-### NEW CODE (with datum):
+### CODE (with datum):
 ```cpp
 // Option 1: Use default TL_DATUM (top positioning)
-tft.drawString("Hello", 100, 50, 2);  // Works correctly now!
+tft.drawString("Hello", 100, 50, 2);  
 
 // Option 2: Be explicit
 tft.setTextDatum(TL_DATUM);
