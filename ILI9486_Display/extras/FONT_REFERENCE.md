@@ -38,9 +38,9 @@ void setup() {
 |-------|---------|---------|
 | 0 | Reserved: "Use current font" | Auto-selected when no parameter given |
 | 1 | Reserved: Built-in 5x7 (explicit) | `tft.drawString("text", x, y, 1)` |
-| 2 | User-defined | Your FreeSans9 |
+| 2 | User-defined | example FreeSans9 |
 | 3 | User-defined | (Available) |
-| 4 | User-defined | Your Roboto25 |
+| 4 | User-defined | example Roboto25 |
 | 5 | User-defined | (Available) |
 
 ---
@@ -77,9 +77,9 @@ int16_t drawCentreString(const char *string, int32_t x, int32_t y, uint8_t font 
 | Value | Behavior | Example |
 |-------|----------|---------|
 | **0** (default) | Use current font set by `setFreeFont()` | `tft.drawString("text", 10, 50)` |
-| **1** | Force built-in 5x7 font | `tft.drawString("text", 10, 50, 1)` |
+| **1** | Point to built-in 5x7 font | `tft.drawString("text", 10, 50, 1)` |
 | **2-5** | Use `fontArray[index]` if set, else fall back to 5x7 | `tft.drawString("text", 10, 50, 2)` |
-| **6+** | Out of bounds â†’ fall back to 5x7 | `tft.drawString("text", 10, 50, 99)` |
+| **6+** | Out of bounds -> fall back to 5x7 | `tft.drawString("text", 10, 50, 99)` |
 
 ### Error Handling
 - **Empty slot** (e.g., `fontArray[3] = nullptr`): Falls back to built-in 5x7
@@ -153,7 +153,7 @@ int16_t y = 50;
 tft.setTextColor(TFT_YELLOW);
 int16_t w1 = tft.drawString("Temp: ", x, y, 2);
 tft.setTextColor(TFT_RED);
-int16_t w2 = tft.drawString("25.3°C", x + w1, y, 4);
+int16_t w2 = tft.drawString("25.3Â°C", x + w1, y, 4);
 ```
 
 ---
@@ -176,7 +176,7 @@ int16_t w2 = tft.drawString("25.3°C", x + w1, y, 4);
 - Color settings persist across font changes
 
 ### Memory Considerations
-- Font header files must be included in your sketch
+- Font header files must be included in your sketch (eg.  dejavuSerif.h)
 - Font data stored in PROGMEM (Flash, not RAM)
 - Font array holds only 6 pointers (minimal RAM usage)
 
@@ -231,3 +231,4 @@ const GFXfont FreeSans9pt7b PROGMEM = {
 | Centered text | `tft.drawCentreString("text", centerX, y, font)` |
 | Scaled 2x | `tft.setTextSize(2); tft.drawString("text", x, y, font)` |
 | With background | `tft.setTextColor(fg, bg); tft.drawString("text", x, y, font)` |
+
