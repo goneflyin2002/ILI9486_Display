@@ -1,11 +1,11 @@
 # ILI9486_Display Library for ESP32-C5
 
-A lightweight, feature-rich display library for the ILI9486 TFT LCD (3.5") on ESP32-C5 microcontrollers. Optimized for performance with DMA support, multiple font handling, and flexible text positioning.
+A lightweight display library for the ILI9486 TFT LCD (3.5") on ESP32-C5 microcontrollers. Optimized for performance with DMA support, multiple font handling, and flexible text positioning.
 
 ## Features
 
 - **ESP32-C5 Optimized**: First library with full support for ESP32-C5 + ILI9486 combination
-- **Software SPI**: Works with any GPIO pins - no hardware SPI constraints
+- **Software SPI** 
 - **DMA Acceleration**: Fast screen fills using DMA buffering
 - **Multiple Font Support**: 
   - Built-in 5x7 pixel font
@@ -18,7 +18,7 @@ A lightweight, feature-rich display library for the ILI9486 TFT LCD (3.5") on ES
 
 ## Hardware Requirements
 
-- **MCU**: ESP32-C5 (also compatible with other ESP32 variants)
+- **MCU**: ESP32-C5 (may be compatible with other ESP32 variants, not yet tested)
 - **Display**: 3.5" TFT LCD with ILI9486 controller
 - **Connection**: SPI (software or hardware)
 
@@ -36,7 +36,7 @@ GND         -> GND
 3.3V        -> LED (Backlight)
 ```
 
-**Note**: These are the tested pin assignments for ESP32-C5 devboards. The C5 has specific GPIO limitations, so these pins have been verified to work reliably.
+**Note**: These are the tested pin assignments for the Waveshare ESP32-C5 devboard. The C5 has specific GPIO limitations *DO NOT use strapping pins*, so these pins have been verified to work reliably.
 
 ## Installation
 
@@ -54,7 +54,7 @@ GND         -> GND
 ### Method 3: Git Clone
 ```bash
 cd ~/Arduino/libraries/
-git clone https://github.com/YourUsername/ILI9486_Display.git
+git clone https://github.com/goneflyin2002/ILI9486_Display.git
 ```
 
 ## Quick Start
@@ -174,7 +174,7 @@ BL_DATUM (6) - Bottom Left      BC_DATUM (7) - Bottom Center   BR_DATUM (8) - Bo
 ## API Reference
 
 ### Display Control
-- `begin(uint32_t freq = 20000000)` - Initialize display (optional SPI frequency)
+- `begin(uint32_t freq = 27000000)` - Initialize display (optional SPI frequency)
 - `setRotation(uint8_t r)` - Set screen rotation (0-3)
 - `fillScreen(uint16_t color)` - Fill entire screen
 
@@ -226,8 +226,8 @@ This library is released under the MIT License. See LICENSE file for details.
 
 ## Support
 
-- **Issues**: Report bugs or request features via [GitHub Issues](https://github.com/Don_M/ILI9486_Display/issues)
-- **Discussions**: Ask questions in [GitHub Discussions](https://github.com/Don_M/ILI9486_Display/discussions)
+- **Issues**: Report bugs or request features via [GitHub Issues](https://github.com/goneflyin2002/ILI9486_Display/issues)
+- **Discussions**: Ask questions in [GitHub Discussions](https://github.com/goneflyin2002/ILI9486_Display/discussions)
 
 ## Why This Library?
 
@@ -257,4 +257,5 @@ Existing solutions for ILI9486 displays don't support the ESP32-C5 properly. Thi
 ---
 
 Made for the ESP32-C5 community
+
 
